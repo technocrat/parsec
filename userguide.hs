@@ -93,23 +93,17 @@ unexpected "b"
 expecting "(a)"
 -} 
 
-
-{- unable to fix this example, which would only return ')'
-testOr1 = {char '('
-          ;char 'a' <|> char 'b'
-          ;char ')'
-*Userguide> run testOr1 "(b)"
-')'
--} 
-
--- replacement testOr1
--- type declaration required for Monomorphism Restriction
-testOr1 :: Stream s m Char => ParsecT s u m String
-testOr1 = many1 $ oneOf "()ab"
+-- unclear whether this example is intended to return only the closing ')'
+-- type declaration now required for Monomorphism Restriction
+testOr1 :: Stream s m Char => ParsecT s u m Char
+testOr1 = do { char '('
+          ; char 'a' <|> char 'b'
+          ; char ')'
+          }
 
 {- 
 *Userguide> run testOr1 "(b)"
-"(b)"
+')'
 -} 
 
 -- type declaration now required for Monomorphism Restriction
