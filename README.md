@@ -16,7 +16,7 @@ Some links:
   and [PDF](https://research.microsoft.com/en-us/um/people/daan/download/parsec/parsec.pdf),
   thanks to Microsoft Research).
 * [Using Parsec](http://book.realworldhaskell.org/read/using-parsec.html),
-  chapter 16 of [Real World Haskell](http://book.realworldhaskell.org/).
+  chapter 16 of [Real World Haskell](http://book.realworldhaskell.org/). (Some examples are broken under GHC 7.10.x; the reference was published in November 2008, when GHC 6.10.1 was released.)
 * [An introduction to the Parsec library](http://kunigami.wordpress.com/2014/01/21/an-introduction-to-the-parsec-library)
   on Kunigami's blog.
 * [An introduction to parsing text in Haskell with Parsec](http://unbui.lt/#!/post/haskell-parsec-basics) on Wilson's blog.
